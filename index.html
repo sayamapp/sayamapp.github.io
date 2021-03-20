@@ -21,12 +21,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
   <link rel="stylesheet" href="css/background.css">
-  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/mystyles.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="has-text-light">
+  <script>hljs.highlightAll();</script>
   <div id="vanta-net" class="vantajs"></div>
   <!-- Javascript -->
 
@@ -79,7 +84,16 @@
                 <code>npn start</code> でsassファイル保存するたんびに勝手にcssを吐くそうです。メモ。<br>
                 ここらへんのコードスニペットがきれいに出ると賢く見えそうです。highlightsjs?調べたら出てきた<br>
                 こんどやる。現状何を書くにもめんどくさい(html直書き)なので変えていきたい。<br>
+                <br>
+                テスト
 
+                <pre class="highlight"><code>npm run css-build</code></pre>
+                <pre class="highlight"><code>npm start</code></pre>
+                </figure>
+
+                atcoderの日でした。今回も安定して3問解きました。一応1年かけて水色までいけば良しという感じでぼちぼち勉強しています。
+                ここ一月くらい緑になりそうでならないペースなので厳しいような気がしてきたがどうなのか。
+                今回は割と理解しやすい問題が多かったので楽しかった。atcoderは問題が何を言ってるのかわかんない時が一番ツラいです。
                 <br>
                 <!-- <time datetime="2021-3-19">11:09 PM - 19 Mar 2021</time> -->
               </div>
@@ -125,4 +139,5 @@
     </div>
   </section>
 </body>
+
 </html>
