@@ -1,42 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>0436memo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <!-- JavaScript and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+  <link rel="stylesheet" href="css/background.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mystyles.css">
 </head>
-<body>
-    <div id="vanta-net" class="vantajs">test </div>
-    test
-       <!-- Javascript -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<!-- JavaScript and dependencies -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-<!-- Vanta.js -->
-<!-- <script src="/assets/js/vendor/three.r119.min.js"></script>
-<script src="/assets/js/vendor/vanta.net.min.js"></script> -->
-<!--<script src="/assets/js/vendor/vanta.waves.min.js"></script>-->
-<!--<script src="/assets/js/vendor/vanta.globe.min.js"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
-<link rel="stylesheet" href="background.css">
-<link rel="stylesheet" href="main.css">
-    <script>
-        VANTA.NET({
-          el: "#vanta-net",
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00
-        })
-        </script>
+<body class="has-text-light">
+  <div id="vanta-net" class="vantajs"></div>
+  <!-- Javascript -->
+
+  <script>
+    VANTA.NET({
+      el: "#vanta-net",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00
+    })
+  </script>
+
+  <section class="hero title-bg">
+    <div class="hero-body">
+      <h1 class="title has-text-light">
+        0436 の memo
+      </h1>
+      <p class="subtitle has-text-primary">
+        My first website with <strong class="has-text-warning">Bulma</strong>!
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+      </div>
+      <div class="column is-8">
+
+        <div class="section">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="img/dayo.jpg" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4 has-text-warning">2021/03/20(Sat)</p>
+                  <p class="subtitle is-6 has-text-primary">Dairy memo</p>
+                </div>
+              </div>
+
+              <div class="content text-color is-size-6">
+                なにやらnodeだのなんだの入れたらsassとやらが使えるようになった。<br>
+                <code>npm run css-build</code>でいい感じにcssがでてくるみたいです。<br>
+                <code>npn start</code> でsassファイル保存するたんびに勝手にcssを吐くそうです。メモ。<br>
+                ここらへんのコードスニペットがきれいに出ると賢く見えそうです。highlightsjs?調べたら出てきた<br>
+                こんどやる。現状何を書くにもめんどくさい(html直書き)なので変えていきたい。<br>
+
+                <br>
+                <!-- <time datetime="2021-3-19">11:09 PM - 19 Mar 2021</time> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="img/dayo.jpg" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4 has-text-warning">2021/03/19(Fri)</p>
+                  <p class="subtitle is-6 has-text-primary">Dairy memo</p>
+                </div>
+              </div>
+
+              <div class="content text-color is-size-6">
+                このご時世に随分ヒマを持て余しているため、何か書いておこうと思ったので。<br>
+                今日はひとまずページの雛形的なものを作ってみた。ホームページ・ビルダー世代には
+                最近の、フロントエンドつーの?全然わかんないので。本当にイミフで困っちゃったんですけども,
+                記憶の片隅にあるhtmlとcssの知識で作ってみました。調べたらbulmaってのがなんかちょっと
+                分かる感じだったので使ってみた。bootstrapとかは全然わからなかった。sassだかなんだかも
+                よく分かんなかったけど色とかカスタマイズするには覚えなきゃいかんのかもしらん。
+                ちょっと調べたら便利そうだし。jekill?とかも
+                調べたけどruby全然知りません人間なので後回し。でもmarkdown書いたら更新できるのは
+                日記を書くのにすごく良さそうなので後々やってみようかと,夏頃にはできたらいいかも。
+                Webglはちょっと勉強したいので意気込み的に背景は動く感じです。なんか、そういうの、あったので、
+                がんばりました。基本的にはrustの勉強のメモになればいいかなと思います。さようなら。
+                <br>
+                <!-- <time datetime="2021-3-19">11:09 PM - 19 Mar 2021</time> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column"></div>
+    </div>
+  </section>
 </body>
 </html>
