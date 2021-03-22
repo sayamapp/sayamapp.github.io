@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0436memo</title>
+
+    <!-- bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+    <!-- jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <!-- three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <!-- vanta -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <!-- highlight.js -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+
+<body>
+    <script>hljs.highlightAll()</script>
+    <div id="vanta-net" class="vantajs"></div>
+
+    <script>
+        VANTA.NET({
+            el: "#vanta-net",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+    </script>
+
+    <!-- header section -->
+    <header class="helo title-bg">
+        <div class="hero-body">
+            <h1 class="title has-text-light">
+                0436のmemo
+            </h1>
+            <p class="subtitle has-text-primary">
+                My first website with <strong class="has-text-warning">Bulma</strong>
+                and <strong class="has-text-warning">Zola</strong>
+            </p>
+        </div>
+    </header>
+
+
+    <!-- contents section -->
+    <div class="columns is-mobile" id="wrapper">
+        <div class="column is-8 is-offset-2">
+            {% block content %} {% endblock %}
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="has-text-centered">
+            <p class="has-text-light">
+                footer
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
