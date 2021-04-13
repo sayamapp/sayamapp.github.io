@@ -41,22 +41,40 @@
             minHeight: 200.00,
             minWidth: 200.00,
             scale: 1.00,
-            scaleMobile: 1.00
+            scaleMobile: 1.00,
+            color:0x3fffff,
+            backgroundColor: 0x000000,
         })
     </script>
 
     <!-- header section -->
-    <header class="helo title-bg">
-        <div class="hero-body">
-            <h1 class="title has-text-light">
-                0436のmemo
-            </h1>
-            <p class="subtitle has-text-primary">
-                My first website with <strong class="has-text-warning">Bulma</strong>
-                and <strong class="has-text-warning">Zola</strong>
-            </p>
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <header class="helo title-bg">
+                <div class="hero-body" style="padding-bottom: 0px; padding-right: 100px">
+                    <h1 class="title has-text-light">
+                        0436のmemo
+                    </h1>
+                    <p class="subtitle has-text-primary">
+                        My first website with <strong class="has-text-warning">Bulma</strong>
+                        and <strong class="has-text-warning">Zola</strong>
+                    </p>
+                </div>
+            </header>
         </div>
-    </header>
+        <div class="navbar-menu" style="align-items: flex-end;">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable" >
+                    <a href="" class="navbar-link is-size-3 has-text-white has-text-weight-bold" style="vertical-align: bottom;">memo</a>
+                    <div class="navbar-dropdown">
+                        <a href="./202003" class="navbar-item">2021/03</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+   
 
 
     <!-- contents section -->
