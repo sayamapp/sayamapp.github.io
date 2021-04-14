@@ -14,16 +14,35 @@ $footer-background-color: rgba(22, 0, 29, 0);
 
 $navbar-background-color: rgba(22, 0, 29, 0);
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+// body {
+//     display: flex;
+//     min-height: 100vh;
+//     flex-direction: column;
+// }
+
+// #wrapper {
+//     flex: 1;
+// }
+
+header {
+    padding: 2rem 4rem;
 }
 
-#wrapper {
-    flex: 1;
+.navbar-item.bd-title {
+    padding: 0;
 }
 
+.navbar-start {
+    margin-left: 8rem;
+}
+
+.subtitle {
+    margin-top: -15px;
+}
+
+.bd-section {
+    margin-bottom: 3rem;
+}
 
 @import "../node_modules/bulma/bulma.sass";
 @import "../node_modules/bulma/sass/utilities/_all.sass";
