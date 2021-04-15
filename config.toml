@@ -14,4 +14,9 @@ highlight_code = true
 
 [extra]
 icon = "dayo.jpg"
+description = "description"
 # Put all your custom variables here
+
+taxonomies = [
+    {name = "tags", rss = false},
+]

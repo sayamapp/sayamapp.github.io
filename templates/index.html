@@ -3,24 +3,41 @@
 {% block content %}
 {# {% set section = get_section(path="_index.md") %} #}
 
+{# ページ全体 #}
+<div class="columns is-desktop" id="wrapper">
+    {# メインコラム 右側 #}
+    <div class="column is-9 saya-main">
+        {# repository タイトル #}
+        <h2 class="saya-index-h2">Repository</h2>
 
-<div class="bd-section">
-    <div class="columns is-desktop" id="wrapper">
-        <div class="column is-9 bd-main">
-            <h2 class="title bd-repository">Repository</h2>
-            {% for page in section.pages %}
-            <div>{{ page.title }}</div>
-            <div>{{ page.content | safe}}</div>
-            {% endfor %}
-        </div>
-        <div class="column is-3">
-            <div class="card">
-                <p>test</p>
-                <p>test</p>
+        {# コンテンツ.md #}
+        {% for page in section.pages %}
+        <div class="saya-repository-card level">
+            <div class="level-left">
+                <div>
+                    <p class="title has-text-primary">
+                        <span class="icon-text has-text-primary">
+                            <span class="icon"><i class="fab fa-github-alt"></i></span>
+                            <span style="margin-right: 1rem;">{{ page.title }}</span>
+                            <span class="tags">
+                            {% for tag in page.taxonomies.tags %}
+                                <span class="tag is-white">{{ tag }}</span>
+                            {% endfor %}
+                            </span>
+                        </span>
+                    </p>
+                    <p class="subtitle has-text-warning">{{ page.extra.description }}</p>
+                    <p class="has-text-light">{{ page.content | safe }}</p>
+                </div>
             </div>
-        </div> 
-
+            <div class="level-right">
+                <figure class="image is-128x128">
+                    <img class="is-rounded" src="{{ page.extra.repo_image }}" alt="repo-image" style="background-color: white;">
+                </figure>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-
 </div>
+
 {% endblock content %}
