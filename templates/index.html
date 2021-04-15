@@ -2,27 +2,25 @@
 
 {% block content %}
 {# {% set section = get_section(path="_index.md") %} #}
-{% for page in section.pages %}
+
+
 <div class="bd-section">
-    <div class="card">
-        <div class="card-content">
-            <div class="media">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-<!--                        <img src="img/dayo.jpg" alt="Placeholder image">-->
-                        <img src= {{ page.extra.icon }} alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="media-content">
-                    <p class="title is-4 has-text-warning">{{ page.date }}</p>
-                    <p class="subtitle is-6 has-text-primary">{{ page.title }}</p>
-                </div>
-            </div>
-            <div class="content has-text-light is-size-6">
-                {{ page.content | safe }}
-            </div>
+    <div class="columns is-desktop" id="wrapper">
+        <div class="column is-9 bd-main">
+            <h2 class="title bd-repository">Repository</h2>
+            {% for page in section.pages %}
+            <div>{{ page.title }}</div>
+            <div>{{ page.content | safe}}</div>
+            {% endfor %}
         </div>
+        <div class="column is-3">
+            <div class="card">
+                <p>test</p>
+                <p>test</p>
+            </div>
+        </div> 
+
     </div>
+
 </div>
-{% endfor %}
 {% endblock content %}

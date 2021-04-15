@@ -9,7 +9,8 @@
     height: 100%;
 }
 
-$card-background-color: rgba(22, 0, 29, 0.712);
+$card-background-color: rgba(22, 0, 29, 0);
+
 $footer-background-color: rgba(22, 0, 29, 0);
 
 $navbar-background-color: rgba(22, 0, 29, 0);
@@ -41,7 +42,32 @@ header {
 }
 
 .bd-section {
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
+}
+
+.container-main {
+    padding: 1rem 4rem;
+}
+
+h2.title {
+    color: white;
+    background-color: black;
+    border-bottom: red 1px solid;
+    padding: 0rem 0rem;
+    margin-left: 2rem;
+}
+// .bd-main {
+//     background-color: rgba(22, 0, 29, 0.712);
+// }
+
+.card-bd {
+    margin: 0px;
+    padding: 0px;
+}
+
+hr.main {
+    background-color: rgba(0, 233, 233, 0.281); 
+    margin-bottom: 0px;
 }
 
 @import "../node_modules/bulma/bulma.sass";
