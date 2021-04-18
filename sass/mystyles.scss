@@ -9,7 +9,10 @@
     height: 100%;
 }
 
-$card-background-color: rgba(22, 0, 29, 0.712);
+// $card-background-color: rgba(22, 0, 29, 0);
+
+$body-color: white;
+
 $footer-background-color: rgba(22, 0, 29, 0);
 
 $navbar-background-color: rgba(22, 0, 29, 0);
@@ -23,6 +26,112 @@ body {
 #wrapper {
     flex: 1;
 }
+
+header {
+    padding: 2rem 4rem;
+}
+
+.navbar-item.bd-title {
+    padding: 0;
+}
+
+.navbar-start {
+    margin-left: 8rem;
+}
+
+.subtitle {
+    margin-top: -15px;
+}
+
+.bd-section {
+    margin-bottom: 0rem;
+}
+
+.container-main {
+    padding: 1rem 4rem;
+}
+
+h2.title {
+    color: white;
+    background-color: black;
+    border-bottom: red 1px solid;
+    padding: 0rem 0rem;
+    margin-left: 2rem;
+}
+
+.base-subtitle {
+    background-color: black;
+}
+
+.repo-container {
+    margin-left: 1rem;
+}
+
+h3.repo-title {
+    text-decoration: underline;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    padding-top: 2rem;
+}
+
+.repo-desc {
+    color: whitesmoke;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+.bd-main {
+    background-color: rgba(0, 0, 0, 0.532);
+}
+
+.card-bd {
+    margin: 0px;
+    padding: 0px;
+}
+
+hr.main {
+    background-color: rgba(0, 233, 233, 0.281); 
+    margin-bottom: 0px;
+}
+
+
+
+
+// index.html main
+.column.saya-main {
+    margin-left: 2rem;
+    padding: 0;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+h2.saya-index-h2 {
+    font-size: 2rem;
+    color: white;
+    border-bottom: red 1px solid;
+
+    margin-top: 1rem;
+    padding: 0rem;
+}
+.saya-repository-card {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 1rem; 
+}
+
+// memo section
+.saya-memo-card {
+    padding: 1rem;
+}
+
+.saya-memo-content {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+hr.saya-memo {
+    margin-bottom: 0;
+}
+
+
 
 
 @import "../node_modules/bulma/bulma.sass";

@@ -25,7 +25,20 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
 
-    <link rel="stylesheet" href="mystyles.css">
+    <!-- fontawesome 5 -->
+    <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
+
+    {% block css%}
+    <link rel="stylesheet" href="{{ get_url(path="mystyles.css") | safe }}">
+    {% endblock css%}
+
+    {% set icon = get_url(path="img/favicon2.png") %}
+    <link rel="icon" href={{ icon }} type="image/x-icon">
+
+    <!-- navbar -->
+    {% set navbar = get_url(path="navbar.js") %}
+    <script src={{ navbar }}></script>
+
 </head>
 
 <body>
@@ -42,55 +55,32 @@
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color:0x3fffff,
+            color: 0x3fffff,
             backgroundColor: 0x000000,
         })
     </script>
 
     <!-- header section -->
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <header class="helo title-bg">
-                <div class="hero-body" style="padding-bottom: 0px; padding-right: 100px">
-                    <h1 class="title has-text-light">
-                        0436のmemo
-                    </h1>
-                    <p class="subtitle has-text-primary">
-                        My first website with <strong class="has-text-warning">Bulma</strong>
-                        and <strong class="has-text-warning">Zola</strong>
-                    </p>
-                </div>
-            </header>
-        </div>
-        <div class="navbar-menu" style="align-items: flex-end;">
-            <div class="navbar-start">
-                <div class="navbar-item has-dropdown is-hoverable" >
-                    <a href="" class="navbar-link is-size-3 has-text-white has-text-weight-bold" style="vertical-align: bottom;">memo</a>
-                    <div class="navbar-dropdown">
-                        <a href="./202003" class="navbar-item">2021/03</a>
-                    </div>
-                </div>
+    {% block navbar %}
+    {% endblock navbar %}
 
-            </div>
-        </div>
-    </nav>
-   
 
 
     <!-- contents section -->
-    <div class="columns is-mobile" id="wrapper">
-        <div class="column is-8 is-offset-2">
-            {% block content %} {% endblock %}
-        </div>
+    <div class="container-main">
+        {% block content %} {% endblock %}
     </div>
 
     <!-- footer section -->
     <footer class="footer">
         <div class="has-text-centered">
             <p class="has-text-light">
-                footer
+                ©2021- sayamapp0436
+                <span class="icon-text"><span class="icon has-text-info"></span>
+                    </span>
             </p>
         </div>
     </footer>
 </body>
+
 </html>
