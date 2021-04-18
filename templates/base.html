@@ -28,11 +28,16 @@
     <!-- fontawesome 5 -->
     <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
 
-    <link rel="stylesheet" href="mystyles.css">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    {% set css = get_url(path="mystyles.css") %}
+    <link rel="stylesheet" href={{ css }}>
+
+    {% set icon = get_url(path="img/favicon2.png") %}
+    <link rel="icon" href={{ icon }} type="image/x-icon">
 
     <!-- navbar -->
-    <script src="navbar.js"></script>
+    {% set navbar = get_url(path="navbar.js") %}
+    <script src={{ navbar }}></script>
+
 </head>
 
 <body>
