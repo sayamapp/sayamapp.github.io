@@ -4,9 +4,9 @@
 {# {% set section = get_section(path="_index.md") %} #}
 
 {# ページ全体 #}
-<div class="columns is-desktop" id="wrapper">
+<section class="columns is-desktop" id="wrapper">
     {# メインコラム 右側 #}
-    <div class="column is-9 saya-main">
+    <article class="column is-9 saya-main">
         {# repository タイトル #}
         <h2 class="saya-index-h2">Repository</h2>
 
@@ -37,7 +37,7 @@
             </div>
         </div>
         {% endfor %}
-    </div>
-</div>
+    </article>
+</section>
 
 {% endblock content %}
