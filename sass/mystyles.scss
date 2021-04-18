@@ -118,6 +118,20 @@ h2.saya-index-h2 {
     padding: 1rem; 
 }
 
+// memo section
+.saya-memo-card {
+    padding: 1rem;
+}
+
+.saya-memo-content {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+hr.saya-memo {
+    margin-bottom: 0;
+}
+
+
 
 
 @import "../node_modules/bulma/bulma.sass";

@@ -28,8 +28,9 @@
     <!-- fontawesome 5 -->
     <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
 
-    {% set css = get_url(path="mystyles.css") %}
-    <link rel="stylesheet" href={{ css }}>
+    {% block css%}
+    <link rel="stylesheet" href="{{ get_url(path="mystyles.css") | safe }}">
+    {% endblock css%}
 
     {% set icon = get_url(path="img/favicon2.png") %}
     <link rel="icon" href={{ icon }} type="image/x-icon">
@@ -60,32 +61,8 @@
     </script>
 
     <!-- header section -->
-    <header>
-        <nav class="navbar">
-            <div class="navbar-brand">
-                <a href="#" class="navbar-item has-text-light is-size-3 has-text-weight-bold bd-title">
-                    0436のindex.html
-                </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div class="navbar-start navbar-menu" id="navMenu">
-                <a href="#" class="navbar-item has-text-light is-size-3 has-text-weight-bold">Link 1</a>
-                <a href="#" class="navbar-item has-text-light is-size-3 has-text-weight-bold">Link 2</a>
-            </div>
-        </nav>
-        <p class="subtitle has-text-primary">
-            <span class="base-subtitle">My first website with 
-            <strong class="has-text-warning">Bulma</strong> and 
-            <strong class="has-text-warning">Zola</strong></span></p>
-    </header>
-
-
-
-
+    {% block navbar %}
+    {% endblock navbar %}
 
 
 
@@ -99,8 +76,8 @@
         <div class="has-text-centered">
             <p class="has-text-light">
                 ©2021- sayamapp0436
-                <span class="icon-text"><span class="icon has-text-info"><i class="fab fa-github-alt"></i></span>
-                <span>saete</span></span>
+                <span class="icon-text"><span class="icon has-text-info"></span>
+                    </span>
             </p>
         </div>
     </footer>
