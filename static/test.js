@@ -55,14 +55,12 @@ loadJSON(function (json) {
         ds.push(date);
     }
     cs = cs.reverse();
-    console.log(cs);
 
     for (let j = 0; j < 14; j++) {
         let x = r;
         let y = r;
         let dx = r * Math.sin(a);
         for (let i = 0; i < 7; i++) {
-            console.log(j * 7 + i);
             if (i % 2 == 0) {
                 if (cs[j * 7 + i] === 0 && Math.random() > 0.5) {
                     drawHexagon(x + 2 * dx * j, y + (r + r * Math.cos(a)) * i, 'black');
