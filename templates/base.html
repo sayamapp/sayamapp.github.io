@@ -7,42 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0436memo</title>
 
-    <!-- bulma -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 
-    <!-- jquery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
     <!-- three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <!-- vanta -->
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
-    <!-- highlight.js -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
 
-    <!-- fontawesome 5 -->
-    <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
 
     {% block css%}
-    <link rel="stylesheet" href="{{ get_url(path="mystyles.css") | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path='mystyles.css') | safe }}">
     {% endblock css%}
 
     {% set icon = get_url(path="img/favicon2.png") %}
     <link rel="icon" href={{ icon }} type="image/x-icon">
 
-    <!-- navbar -->
-    {% set navbar = get_url(path="navbar.js") %}
-    <script src={{ navbar }}></script>
-
 </head>
 
+
+
 <body>
-    <script>hljs.highlightAll()</script>
     <div id="vanta-net" class="vantajs"></div>
 
     <script>
@@ -60,27 +54,55 @@
         })
     </script>
 
-    <!-- header section -->
-    {% block navbar %}
-    {% endblock navbar %}
+    <!-- Main Navbar -->
+    <header class="sa-header"> 
+    <nav class="uk-navbar">
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active">
+                    <div class="sa-title">
+                        <a href="#" class="sa-title">0436のindex.html</a>
+                        <div class="sa-subtitle">My first website with Zola and UIKit</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                <li><a class="uk-text-large" href="https://shubhamjain.co/about/">about</a></li>
+                <li><a class="uk-text-large" href="https://shubhamjain.co/">blog</a></li>
+            </ul>
+            <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+        </div>
+    </nav>
+    </header>
 
-
-
-    <!-- contents section -->
-    <div class="container-main">
-        {% block content %} {% endblock %}
+    <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav">
+                <li><a class="uk-text-large" href="https://shubhamjain.co/about/">about</a></li>
+                <li><a class="uk-text-large" href="https://shubhamjain.co/">blog</a></li>
+            </ul>
+        </div>
     </div>
 
-    <!-- footer section -->
-    <footer class="footer">
-        <div class="has-text-centered">
-            <p class="has-text-light">
-                ©2021- sayamapp0436
-                <span class="icon-text"><span class="icon has-text-info"></span>
-                    </span>
-            </p>
+    <article class="sa-article">
+        <h2 class="sa-h2" style="width: 100%;"><i class="fas fa-clock"></i> last update</h2>
+        <div class="sa-repo-container">
+        <ul>
+            <li>2020/04/14 14:00:00 dairyMemo</li>
+            <li>2020/04/13 21:00:00 dairyMemo</li>
+            <li>2020/04/12 12:00:00 dairyMemo</li>
+        </ul>
         </div>
-    </footer>
+        <h2 class="sa-h2"><i class="fab fa-github-alt"></i> contribute [kusa]</h2>
+        <div class="sa-repo-container">
+            <canvas id="canvas" width="800" height="350"></canvas>
+            <script src="test.js"></script>
+        </div>
+    </article>
+
+
 </body>
 
 </html>
