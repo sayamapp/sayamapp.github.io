@@ -47,15 +47,17 @@ loadJSON(function (json) {
                 drawHexagon1(x, y, 'red');
             }
 
-            let c = 255 / Math.max((tileCountX - (cx * cx / 10)), 1);
-            let outline_color = 'rgb(' + c + ',' + c + ',' + c + ')';
-            drawOutline(x, y, outline_color); 
+            if (cc !== 0 || flag1) {
+                let c = Math.max(cx * cx * 5, 1);
+                let outline_color = 'rgb(' + c + ',' + c + ',' + c + ')';
+                drawOutline(x, y, outline_color); 
+            }
         }
     }
 });
 
 function drawOutline(x, y, color) {
-    ctx.lineWidth = 2.0;
+    ctx.lineWidth = 1.0;
     ctx.strokeStyle = color;
     ctx.beginPath();
     for (var i = 0; i < 6; i++) {
@@ -78,7 +80,7 @@ function drawHexagon1(x, y, color) {
 function drawHexagon2(x, y, color) {
     drawHexagon1(x, y, 'black')
     ctx.fillStyle = color;
-    let dr = r / 2;
+    let dr = r / 3;
     ctx.beginPath();
     for(var j = 0; j < 6; j++) {
         ctx.lineTo(x + dr * Math.sin(a * j), y + dr * Math.cos(a * j));

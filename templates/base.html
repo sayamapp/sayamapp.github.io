@@ -91,105 +91,19 @@
         </div>
         <h2 class="sa-h2"><i class="fab fa-github-alt"></i> contribute [kusa]</h2>
         <div class="sa-repo-container">
-            <canvas id="canvas" width="800" height="350"></canvas>
-            <script src="test.js"></script>
+            <canvas id="canvas-kusa" width="800" height="350"></canvas>
+            <script src="gitContribute.js"></script>
         </div>
 
+        <script src="graph.js"></script>
         <h2 class="sa-h2"><i class="fas fa-chart-line"></i> graphes</h2>
-        <canvas id="myChartAc" width="400" height="100" style="background-color: rgba(0,0,0,0.5);"></canvas>
-        <script>
-            var ctxx = document.getElementById("myChartAc");
-            var myChartAc = new Chart(ctxx, {
-                type: 'line',
-                data: {
-                    labels:['1', '2', '3', '4', '5', '6'],
-                    datasets: [
-                        {
-                            lavel: 'atcoder late',
-                            data: [200, 24, 155, 12, 145, 14],
-                            borderColor: 'cyan',
-                            backgroundColor: 'red',
-                            tension: 0.4,
-                        },
-                    ],
-                },
-                options: {
-                    scales: {
-                        y: {
-                            ticks: {
-                                suggestedMax: 200,
-                                suggestedMin: 0,
-                                stepSize: 100,
-                            },
+        <canvas id="myChartAc" width="400" height="100"></canvas>
+        <script src="acGraph.js"></script>
 
-                            grid: {
-                                color: 'white',
-                            },
-                        },
-                    },
-                    elements: {
-                        line: {
-                            borderWidth: 1,
-                        },
-                    },
-                    plugins: {
-                        legend: {
-                            display: false,
-                        },
+        {# <h2 class="sa-h2"><i class="fas fa-chart-line"></i> loto profit</h2> #}
+        <canvas id="myChartLt" width="400" height="100"></canvas>
+        <script src="ltGraph.js"></script>
 
-                    },
-                },
-            });
-            console.log(myChartAc);
-        </script>
-
-        <h2 class="sa-h2"><i class="fas fa-chart-line"></i> loto profit</h2>
-        <canvas id="myChartLt" width="400" height="100" style="background-color: rgba(0,0,0,0.5);"></canvas>
-        <script>
-            var ctxx = document.getElementById("myChartLt");
-            var myChartLt = new Chart(ctxx, {
-                type: 'line',
-                data: {
-                    labels:['1', '2', '3', '4', '5', '6'],
-                    datasets: [
-                        {
-                            lavel: 'atcoder late',
-                            data: [200, 190, 155, 120, 45, 14],
-                            borderColor: 'magenta',
-                            backgroundColor: 'white',
-                            tension: 0.4,
-                        },
-                    ],
-                },
-                options: {
-                    scales: {
-                        y: {
-                            ticks: {
-                                suggestedMax: 200,
-                                suggestedMin: 0,
-                                stepSize: 200,
-                            },
-
-                            grid: {
-                                color: 'orange',
-                            },
-                        },
-                    },
-                    elements: {
-                        line: {
-                            borderWidth: 1,
-                        },
-                    },
-                    plugins: {
-                        legend: {
-                            display: false,
-                        },
-
-                    },
-                },
-            });
-            console.log(myChartAc);
-        </script>
 
         <h2 class="sa-h2" style="width: 100%;"><i class="fas fa-clock"></i> last update</h2>
         <div class="sa-repo-container">
