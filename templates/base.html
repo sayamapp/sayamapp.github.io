@@ -27,13 +27,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- gitgraph.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@gitgraph/js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@gitgraph/js"></script> -->
 
     {% block css%}
-    <link rel="stylesheet" href="{{ get_url(path='mystyles.css') | safe }}">
-    {% endblock css%}
-
-    {% set icon = get_url(path="img/favicon2.png") %}
+    <link rel="stylesheet" href="{{ get_url(path='mystyles.css') | safe }}"> {% endblock css%} {% set icon = get_url(path="img/favicon2.png") %}
     <link rel="icon" href={{ icon }} type="image/x-icon">
 
 </head>
@@ -59,26 +56,26 @@
     </script>
 
     <!-- Main Navbar -->
-    <header class="sa-header"> 
-    <nav class="uk-navbar">
-        <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav">
-                <li class="uk-active">
-                    <div class="sa-title">
-                        <a href="#" class="sa-title">0436のindex.html</a>
-                        <div class="sa-subtitle">My first website with Zola and UIKit</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="uk-navbar-right">
-            <ul class="uk-navbar-nav uk-visible@s">
-                <li><a class="uk-text-large" href="https://shubhamjain.co/about/">about</a></li>
-                <li><a class="uk-text-large" href="https://shubhamjain.co/">blog</a></li>
-            </ul>
-            <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
-        </div>
-    </nav>
+    <header class="sa-header">
+        <nav class="uk-navbar">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <div class="sa-title">
+                            <a href="#" class="sa-title">0436のindex.html</a>
+                            <div class="sa-subtitle">My first website with Zola and UIKit</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@s">
+                    <li><a class="uk-text-large" href="https://shubhamjain.co/about/">about</a></li>
+                    <li><a class="uk-text-large" href="https://shubhamjain.co/">blog</a></li>
+                </ul>
+                <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+            </div>
+        </nav>
     </header>
 
     <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
@@ -91,46 +88,28 @@
     </div>
 
     <article class="sa-article">
-        
+
         </div>
         <h2 class="sa-h2"><i class="fab fa-github-alt"></i> contribute [kusa]</h2>
         <div class="sa-repo-container">
             <canvas id="canvas-kusa" width="800" height="350"></canvas>
-            <script src="gitContribute.js"></script>
+            <!-- <script src="js/gitContribute.js"></script> -->
         </div>
 
-        <script src="graph.js"></script>
+        <script src="./main.js"></script>
+        <!-- <script src="js/graph.js"></script>
         <h2 class="sa-h2"><i class="fas fa-chart-line"></i> graphes</h2>
         <canvas id="myChartAc" width="400" height="100"></canvas>
-        <script src="acGraph.js"></script>
+        <script src="js/acGraph.js"></script>
 
-        {# <h2 class="sa-h2"><i class="fas fa-chart-line"></i> loto profit</h2> #}
+        {#
+        <h2 class="sa-h2"><i class="fas fa-chart-line"></i> loto profit</h2> #}
         <canvas id="myChartLt" width="400" height="100"></canvas>
-        <script src="ltGraph.js"></script>
+        <script src="js/ltGraph.js"></script>
 
 
-        <h2 class="sa-h2" style="width: 100%;"><i class="fas fa-clock"></i> last update</h2>
-        <div id="graph-container"></div>
-        <script>
-            const graphContainer = document.getElementById("graph-container");
-            const gitgraph = GitgraphJS.createGitgraph(graphContainer, {responsive: true,});
+        <h2 class="sa-h2" style="width: 100%;"><i class="fas fa-clock"></i> last update</h2> -->
 
-            const master = gitgraph.branch("master");
-            master.commit("Initial commitxxxx w");
-            const develop = master.branch("develop");
-            develop.commit("Add TypeScript");
-
-            const aFeature = develop.branch("a-feature");
-            aFeature
-                .commit("Make it work")
-                .commit("Make it right")
-                .commit("Make it fast");
-            
-            develop.marge(aFeature);
-            develop.commit("Prepare v1");
-
-            master.merge(develop).tag("V1.0.0");
-        </script>
     </article>
 
 

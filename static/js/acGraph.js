@@ -1,11 +1,11 @@
-let pathAc = './atcoder.json';
+let pathAc = 'js/atcoder.json';
 
 let myCtx = document.getElementById("myChartAc");
 
 
 
 
-loadJSON(function (json) {
+loadJSON(function(json) {
     let results = json.results;
     let labels = [];
     let data = [];
@@ -19,14 +19,12 @@ loadJSON(function (json) {
         type: 'line',
         data: {
             labels: labels,
-            datasets: [
-                {
-                    data: data,
-                    borderColor: 'cyan',
-                    backgroundColor: 'red',
-                    tension: 0.4,
-                },
-            ],
+            datasets: [{
+                data: data,
+                borderColor: 'red',
+                backgroundColor: 'red',
+                tension: 0.4,
+            }, ],
         },
         options: {
             scales: {
@@ -61,7 +59,7 @@ function loadJSON(callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', pathAc, true);
-    xobj.onreadystatechange = function () {
+    xobj.onreadystatechange = function() {
         if (xobj.readyState == 4 && xobj.status == "200") {
             callback(JSON.parse(xobj.responseText));
         }
