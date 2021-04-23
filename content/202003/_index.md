@@ -1,4 +1,4 @@
 +++
 sort_by = "date"
-template="test.html"
+template = "section.html"
 +++
