@@ -1,11 +1,10 @@
-let pathAc = 'js/atcoder.json';
-
+export function test2() {
+    return renderAcGraph()
+}
+let json = require('../json/atcoder.json');
 let myCtx = document.getElementById("myChartAc");
 
-
-
-
-loadJSON(function(json) {
+function renderAcGraph() {
     let results = json.results;
     let labels = [];
     let data = [];
@@ -52,17 +51,5 @@ loadJSON(function(json) {
         },
     };
 
-    newChart(myCtx, chart);
-});
-
-function loadJSON(callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', pathAc, true);
-    xobj.onreadystatechange = function() {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            callback(JSON.parse(xobj.responseText));
-        }
-    };
-    xobj.send(null);
-}
+    new Chart(myCtx, chart);
+};
