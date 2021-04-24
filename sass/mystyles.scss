@@ -1,6 +1,21 @@
 @charset "utf-8";
-$media-pc: 1024px;
-$media-sp: 1023px;
+
+$breakpoints: (
+    'sm': 'screen and (min-width: 0px)',
+    'pc': 'screen and (min-width: 400px)',
+    'lg': 'screen and (min-width: 1024px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+$text-color: white;
+$green: #00FF7F;
+$bg-color: rgba(0, 0, 0, 0.7);
+
 .vantajs {
     position: fixed;
     z-index: -100;
@@ -18,7 +33,7 @@ body {
 
 a.sa-title {
     text-transform: none;
-    color: white;
+    color: $text-color;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -28,31 +43,88 @@ div.sa-subtitle {
     font-size: 1rem;
 }
 
+.sa-header {
+    margin: 1rem;
+    @include mq(lg) {
+        width: 1024px;
+        margin: 0 auto;
+    }
+}
+
+.sa-article {
+    margin: 1rem;
+    @include mq(lg) {
+        width: 1024px;
+        margin: 0 auto;
+    }
+}
+
 .sa-h2 {
+    background-color: $bg-color;
     margin-top: 1rem;
-    color: greenyellow;
-    font-weight: lighter;
-    // border-bottom: red 1px solid;
+    color: $green;
+    font-size: 1rem;
+    @include mq(pc) {
+        font-size: 1.5rem;
+    }
+}
+
+.sa-author-icon {
+    width: 48px;
+    height: 48px;
+    @include mq(pc) {
+        width: 96px;
+        height: 96px;
+    }
+}
+
+.sa-article-header {
+    display: flex;
+    width: 100%;
+    float: left;
+    margin-bottom: 1rem;
+}
+.sa-article-data {
+    margin-left: 0.5rem;
+}
+.sa-article-date {
+    color: $green;
+    margin: 0;
+    @include mq(pc) {
+        font-size: 1.5rem;
+    }
+}
+.sa-article-title {
+    color: gold;
+    margin: 0;
+    @include mq(pc) {
+        font-size: 1.2rem;
+    }
+}
+
+.sa-article-content {
+    padding-left: 1rem;
+    @include mq(pc) {
+        padding-left: 120px;
+    }
 }
 
 .sa-card {
     color: gainsboro;
-    background-color: rgba($color: #000000, $alpha: 0.8);
+    background-color: $bg-color;
     display: block;
 }
 
 
 
-#wrapper {
-    flex: 1;
-}
+
 
 #myChartAc {
-    background-color: rgba($color: #000000, $alpha: 0.8);
+    background-color: $bg-color;
 }
 
 #myChartLt {
-    background-color: rgba($color: #000000, $alpha: 0.8);
+    background-color: $bg-color;
 }
 
 svg {
@@ -62,5 +134,3 @@ svg {
     background-color: rgba($color: #000000, $alpha: 0.8);
 }
 
-@import url('sp.css') screen and (max-width: $media-sp);
-@import url('pc.css') screen and (min-width: $media-pc);

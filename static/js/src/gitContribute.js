@@ -9,7 +9,7 @@ const a = 2 * Math.PI / 6;
 const r = 30;
 const offsetX = 3;
 const offsetY = 3;
-const tileCountX = 14;
+const tileCountX = 20;
 const tileCountY = 7;
 
 function renderGitContribute() {
