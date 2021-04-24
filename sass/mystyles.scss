@@ -2,7 +2,7 @@
 
 $breakpoints: (
     'sm': 'screen and (min-width: 0px)',
-    'pc': 'screen and (min-width: 400px)',
+    'pc': 'screen and (min-width: 800px)',
     'lg': 'screen and (min-width: 1024px)',
 ) !default;
 
@@ -76,6 +76,7 @@ div.sa-subtitle {
         width: 96px;
         height: 96px;
     }
+    
 }
 
 .sa-article-header {
