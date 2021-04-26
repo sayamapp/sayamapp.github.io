@@ -215,6 +215,18 @@
    "ContestName": "第二回日本最強プログラマー学生選手権",
    "ContestNameEn": "Japanese Student Championship 2021",
    "EndTime": "2021-04-17T18:10:00+09:00"
+  },
+  {
+   "IsRated": true,
+   "Place": 3301,
+   "OldRating": 728,
+   "NewRating": 739,
+   "Performance": 824,
+   "InnerPerformance": 824,
+   "ContestScreenName": "abc199.contest.atcoder.jp",
+   "ContestName": "AtCoder Beginner Contest 199（Sponsored by Panasonic）",
+   "ContestNameEn": "",
+   "EndTime": "2021-04-24T22:40:00+09:00"
   }
  ]
 }
