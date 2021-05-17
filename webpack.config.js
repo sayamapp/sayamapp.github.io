@@ -6,5 +6,5 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, './static'),
     },
-    mode: 'development',
+    mode: 'development'
 }
