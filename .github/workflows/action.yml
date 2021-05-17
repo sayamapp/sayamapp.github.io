@@ -1,4 +1,0 @@
-name: "testaction"
-runs: 
-  using: "node12"
-  main: "./static/js/json/atcoder.json"

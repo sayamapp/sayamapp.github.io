@@ -6,8 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Test
-      uses: ./
     - name: shalzz/zola-deploy-action
       uses: shalzz/zola-deploy-action@master
       env:
