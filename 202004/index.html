@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0436 first website</title>
+
+    
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<!-- three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<!-- vanta -->
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+
+<link rel="stylesheet" href="https://sayamapp.github.io/mystyles.css">
+
+
+
+<link rel="icon" href=https:&#x2F;&#x2F;sayamapp.github.io&#x2F;img&#x2F;favicon2.png type="image/x-icon">
+
+</head>
+
+<body>
+    <div id="vanta-net" class="vantajs"></div>
+    <script>
+        VANTA.NET({
+            el: "#vanta-net",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3fffff,
+            backgroundColor: 0x000000,
+        })
+    </script>
+
+    
+    <!-- Main Navbar -->
+    <header class="sa-header">
+        <nav class="uk-navbar">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <div class="sa-title">
+                            <a href="../" class="sa-title">0436のdairymemo</a>
+                            <div class="sa-subtitle">My first website with Zola and UIKit</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@s">
+                    <li><a class="uk-text-large" href="../">index</a></li>
+                    <li><a class="uk-text-large" href="./202004">blog</a></li>
+                </ul>
+                <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav">
+                <li><a class="uk-text-large" href="../">index</a></li>
+                <li><a class="uk-text-large" href="./202005">blog</a></li>
+            </ul>
+        </div>
+    </div>
+     
+
+    
+    <article class="sa-article">
+        <ul>
+            <li>202004</li>
+            <li>202003</li>
+        </ul>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-05-11</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>電気の番組。ニューオーターの次はDAFでした。ガビ(ホセ・ガビ・デルガド・ロペスでしたっけ?)亡くなられていたとは知らなかった。
+私もDAFはそれこそ電気経由で知って衝撃を受けて以来未だにやっぱカッコイイ。
+ドイツのクラブに行った時、ドキドキしながら登った階段の向こうに広がる大空間。場所と音のデカさもさることながら、
+その空間をそれこそDAFみたいな格好したおっさんが埋め尽くしている光景を見て、本場だ---!と感動のあまり気絶しそうになったのは今でも忘れない。</p>
+<p>コンパイラできたー!素晴らしい。天才。ま、そんなことはないんだけど、そんな気分にさせてくれる。最高です。
+ほんでラストの章はOSを作るってことで、これはまぁ難しいっちゃ難しいというか、アルゴリズムの基礎をふんだんに学べ。そしてひれ伏せ。
+みたいな感じなんだとは思いますが、結局アルゴリズムは自由演技ですから、難しいところはごまかせるかなと思っていますがどうだろう。
+今週中に終わらせれば設定した締切も守れてしまう。やっぱり天才かもしらん。</p>
+<p>とりま、ここまで来るのに本腰入れて完成を目標に掲げてリポジトリ作ってから一ヶ月半くらい(git覚えて良かったと今つくづく思った。)
+その前にはHaskellで書いてみたりpythonで書いてみたりを7章くらいまで進めたりしたので、都合2年位はかかっていると思う。
+ほんでその頃のHaskellの勉強がrustを書くのに超活きている感じ。だからまぁ、何かを達成するに2年位はかかるよねという事なのかもしらん。
+むしろ2年間も一冊の本で楽しめるとか最高だもの。気がついたらポインタもオブズェクト指向も関数型も完全に理解してますので。
+と、すっかり完成させた気でいるけどまだ終わってないです。</p>
+<p>ひとまずお祝いに好み焼きを作って腹いっぱい食ったよ。
+酒は12章の終わりまでおあずけとした。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-05-11</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>電気の番組。ニューオーターの次はDAFでした。ガビ(ホセ・ガビ・デルガド・ロペスでしたっけ?)亡くなられていたとは知らなかった。
+私もDAFはそれこそ電気経由で知って衝撃を受けて以来未だにやっぱカッコイイ。
+ドイツのクラブに行った時、ドキドキしながら登った階段の向こうに広がる大空間。場所と音のデカさもさることながら、
+その空間をそれこそDAFみたいな格好したおっさんが埋め尽くしている光景を見て、本場だ---!と感動のあまり気絶しそうになったのは今でも忘れない。</p>
+<p>コンパイラできたー!素晴らしい。天才。ま、そんなことはないんだけど、そんな気分にさせてくれる。最高です。
+ほんでラストの章はOSを作るってことで、これはまぁ難しいっちゃ難しいというか、アルゴリズムの基礎をふんだんに学べ。そしてひれ伏せ。
+みたいな感じなんだとは思いますが、結局アルゴリズムは自由演技ですから、難しいところはごまかせるかなと思っていますがどうだろう。
+今週中に終わらせれば設定した締切も守れてしまう。やっぱり天才かもしらん。</p>
+<p>とりま、ここまで来るのに本腰入れて完成を目標に掲げてリポジトリ作ってから一ヶ月半くらい(git覚えて良かったと今つくづく思った。)
+その前にはHaskellで書いてみたりpythonで書いてみたりを7章くらいまで進めたりしたので、都合2年位はかかっていると思う。
+ほんでその頃のHaskellの勉強がrustを書くのに超活きている感じ。だからまぁ、何かを達成するに2年位はかかるよねという事なのかもしらん。
+むしろ2年間も一冊の本で楽しめるとか最高だもの。気がついたらポインタもオブズェクト指向も関数型も完全に理解してますので。
+と、すっかり完成させた気でいるけどまだ終わってないです。</p>
+<p>ひとまずお祝いに好み焼きを作って腹いっぱい食ったよ。
+酒は12章の終わりまでおあずけとした。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-05-10</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>コンパイラ作り全然終わりませんでした。流石クライマックス。仕様うろ覚えのまま進ませてはくれなかったです。よくよく考えたら自分が作るコンピュータの仕様を自分が知らないとか
+ありえない事ですものね。まぁ今週中にはって感じ。</p>
+<p>緊急事態宣言が延長だそうで、私はコロナ前からどうかしているので自身にはあんまり影響は無いのですが、流石に最近街の様子がおかしい気がする。
+ついにこの店が陥落したか、が増えてきた感じ。東京という街は3日で潰れるような店も多いので、ここ1年の変化は想定(別に何か想定していたわけではないけど)の範囲だったけど、
+ここ最近の変化はちょっと見過ごせないレベルだと思う。地方の飲食店とか観光とか、いよいよ本当にヤバいんじゃないかしら?
+こちらとしては外出を控えつつ一日も早い収束を願う日常を送るしかできないのだけれども。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-05-08</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>今週は起きている時間の95%を寝て過ごした。季節の変わり目はどうしてもこうなってしまう。
+それでも症状が続くことは少ないので過眠の症状はだいぶ改善している模様です。自分の時間が持てるって本当に素晴らしい。</p>
+<p>最近気がついた事。ごはんが非常に美味しい。いや、美味しいというのはちょっと違って、こう、味っつうの?私は自他共に認める味音痴というか本当に何を食ってもウマい以外の感想がないタイプだったんですが、最近、肉やら魚やらを食べていると、ちょっとした瞬間に、匂いみたいなものを感じる事があるような気がしないでもない。例えばジンギスカンやらホルモンについて、臭みの評価みたいなの、あるじゃないですか。あれ本当に意味がわかんなかったんだけど、最近、もしや豚肉の臭みとはこれの事では?と思う瞬間がちょっとだけあります。あ、今日はゴハンを美味しく炊けているのでは?みたいなのが、本当にちょっとだけ。脳が覚醒したのか、単に歳をとったら薄味が好きになるみたいなやつなのかよくわかりませんけど、今度スシロー行ったらなんか変わった魚でも食ってやろうかと思います。40年以上生きてて寿司ネタの違いとか全くわかんない。全部うまい。好き嫌いも残したことも無い。</p>
+<p>n2tは11章。今週末に締め切りを設定しているんだけど、ギリギリ終わるかどうかな感じ。一応あとは書くだけみたいな感じにはなっているのだけども書くのも一苦労な感じ。</p>
+<p>atcoderは今週も参加して3問。もはや再帰もまともに書けないレベルだけどまぁいいや。
+あと10歳若かったら腹を立てたに違いない。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-05-03</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>n2t10章終わたた。続いて11章のコンパイラ作成に向かいます。10章で書いたコードの改造がメインになるっぽいけど、如何せん今の所自分で書いたパーサがどんな動きをしているのか全く分かってないので改造もクソもないだろみたいな状況。内容自体もコンパイラ作成なんてどう考えてもクライマックスですからかなりの難易度の気配。ゴールデンウィーク中に出来たらご褒美に寿司でも食べに行きたい。</p>
+<p>あとはなにも思いつかない。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-05-01</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>atcoder 3問解いた。n2t作り終わったら練習するんだ...</p>
+<p>n2tは引き続きパーサを書く。細かい修正を残してほぼほぼ出来たけど
+なんか実に読みづらい代物が出来上がってしまった。下手っぴ。</p>
+<p>ゲームは2日目にして手が止まる。結構考えたのにいざ詳細を詰めると全然ダメクセェ。
+なんか解決策があるのは間違いないんだけど、そこにたどり着くにはどうしたらいいのか。
+つか、脚本ぽいのを書かなきゃいかんのですけども、その書き方が全くわからんし、先は長い。ま、楽しんでいこう。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-30</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>ゴールデンウィーク突入ということですがとくに変化は無い。当然のように関係がないです。社会との接点がまるで無い。
+今日はタコライスを作った。あとはいつも通り、と思ったけど、かねてから考えていたゲームの仕様を一日練ってみる。サウンドノベルというかアドベンチャーゲームと言うか。
+ちょっと自分には荷が重いスケール(弟切草の1/3くらい?)なので余裕が出来たら作りたいなと思ってたんだけどこれからの人生にもう余裕ができる気配がないので、一番作れる可能性が高いものから作っていこうと思います。どんくらい時間かかるんだろう?まったく見当がつきませんが、せっかくページも作ったので何かしら、企画の柱みたいなのがあるといいんじゃないか?という事でもあったりします。</p>
+<p>そういえば4月は今日で終わりということでちょっとまとめてみる。github pages(ここ)を作って、気がついたら一ヶ月過ぎていました。もっと早くに始めるべきだった。遥か昔、インターネット黎明テキストサイト期にちょろっと手を出してから早20年、今回まだ1ヶ月だけど、振り返ればHtmlもcssもjavascriptも勉強できてるし、すごく面白いし、日々の成果はまとまるし、ゲーム制作にもまずは着手することができたし、良いことづくめと言わざるを得ないです。3日の次は3ヶ月が目標とか言いますのでそこを目指していきたいとか、もちっと時間効率みたいなのも改善できると良いなとか、ちょっとあーたこれ意識高い系じゃないですかこれ。でも無職なんですよね。残念です。</p>
+<p>zone mad_hacker 今日も飲んでみたけどこれ味ファンタグレープじゃね?ファンタグレープでよくね?</p>
+<p>n2tはパーサをちょろっと設計してみる。たたき台はまぁできたのかなーくらいの進捗。一応日曜日までには完成させる予定を立てちゃったので、あとはガガガと分岐とか書く感じ。今日はもう寝ますけど。今日12時間くらい寝ることになりますけど眠いから仕方がない。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-29</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>zone mad_hacker の缶をちょっと写してみました。</p>
+<pre data-lang="javascript" style="background-color:#2b303b;color:#c0c5ce;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">function </span><span style="color:#8fa1b3;">binarySearch</span><span>(</span><span style="color:#bf616a;">arr</span><span>, </span><span style="color:#bf616a;">val</span><span>, </span><span style="color:#bf616a;">min</span><span>, </span><span style="color:#bf616a;">max</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">max </span><span>&lt; </span><span style="color:#bf616a;">min</span><span>) { </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">false</span><span>;}
+</span><span>    </span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">half </span><span>= Math.</span><span style="color:#96b5b4;">floor</span><span>(</span><span style="color:#bf616a;">min </span><span>+ (</span><span style="color:#bf616a;">max </span><span>- </span><span style="color:#bf616a;">min</span><span>) / </span><span style="color:#d08770;">2</span><span>);
+</span><span>    </span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">arr</span><span>[</span><span style="color:#bf616a;">half</span><span>] === </span><span style="color:#bf616a;">val</span><span>) {</span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">half</span><span>;}
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">arr</span><span>[</span><span style="color:#bf616a;">half</span><span>] &gt; </span><span style="color:#bf616a;">val  
+</span><span>        ? </span><span style="color:#8fa1b3;">binarySearch</span><span>(</span><span style="color:#bf616a;">arr</span><span>, </span><span style="color:#bf616a;">val</span><span>, </span><span style="color:#bf616a;">min</span><span>, </span><span style="color:#bf616a;">half </span><span>- </span><span style="color:#d08770;">1</span><span>) 
+</span><span>        : </span><span style="color:#8fa1b3;">binarySearch</span><span>(</span><span style="color:#bf616a;">arr</span><span>, </span><span style="color:#bf616a;">val</span><span>, </span><span style="color:#bf616a;">half </span><span>+ </span><span style="color:#d08770;">1</span><span>, </span><span style="color:#bf616a;">max</span><span>);
+</span><span>}
+</span></code></pre>
+<p>javascript不慣れなのでMath.floorしてるのとかboolもintも返っちゃうのとか面白い。こうやって書くんすね。
+つか普通にバイナリサーチ。続きも書こうかと思ったけど目シャバシャバしちゃってやめた。
+function bubbleSort って書いてあったので多分バブルソートが書いてあります。ハッカーなので(キリッ)</p>
+<p>n2t。続きのパーサを書こうとして再帰っぽくなるところを考えてたんだけど、
+rust特有の何かが非常にめんどくさい所有権にハマってしまった。
+回避方法はわかるんだけどもっといいやり方があるはずと調べていくうちに
+結局何がしたくて何ができなかったのかすっかり忘れてしまうのも割とよくある現象だと思う。
+なんだっけか。えーと</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>MyStruct {
+</span><span>    </span><span style="color:#bf616a;">xs</span><span>: Vec&lt;</span><span style="color:#b48ead;">usize</span><span>&gt;,
+</span><span>}
+</span><span style="color:#b48ead;">impl </span><span>MyStruct {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">func1</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">for</span><span> x in </span><span style="color:#bf616a;">self</span><span>.xs {
+</span><span>            </span><span style="color:#b48ead;">if</span><span> x &gt; </span><span style="color:#d08770;">10 </span><span>{
+</span><span>                </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">func2</span><span>();
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">func2</span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#bf616a;">self</span><span>.xs.</span><span style="color:#96b5b4;">pop</span><span>();
+</span><span>        println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, x);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>これは通らない。アコムで借りてパチンコに行く感じです。
+それはダメ。全然わかる。ほんで、</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span>MyStruct {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">func1 </span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#bf616a;">self</span><span>.xs.</span><span style="color:#96b5b4;">len</span><span>() {
+</span><span>            </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">self</span><span>.xs[i] &gt; </span><span style="color:#d08770;">10 </span><span>{
+</span><span>                </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#96b5b4;">func2</span><span>();
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">func2 </span><span>(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> x = </span><span style="color:#bf616a;">self</span><span>.xs.</span><span style="color:#96b5b4;">pop</span><span>();
+</span><span>        </span><span style="color:#96b5b4;">println</span><span>(&quot;</span><span style="color:#a3be8c;">{}</span><span>&quot;, x);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>これはクラッシュ。分かる。もう破産です。</p>
+<p>何がしたかったか忘れたので有益な情報はおろかオチも無い。ごめんね。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-28</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>zone mad_hacker ウメウメ。プログラマの好きそうな味とかで作ったなら天才すぎる。無職もこういうの好きです。
+缶に書いてあるのはjavascript? === &lt;-これ使うのあんまり知らないので。function辺りもそれっぽい。
+などとしばらく眺めてたらこれちゃんと動くぽいじゃん。試してみようかしら。</p>
+<h2 id="jin-ri-nomemo">今日のメモ</h2>
+<p>今日もnand2tetris続き。トークナイザ。まずはコメント行を消してしまおうと思いまして、
+まず思いついたのは正規表現なんだけど、正規表現弱者なのでどうにか使わず済めば良いなと思う。</p>
+<p>とりあえず2文字 / が続くとこ行末まで消せばいいんだろという事で書いたのが、</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">for</span><span> c in line.</span><span style="color:#96b5b4;">peekable</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> nc = line.</span><span style="color:#96b5b4;">peek</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">if</span><span> c == &#39;</span><span style="color:#a3be8c;">/</span><span>&#39; &amp;&amp; nc == &#39;</span><span style="color:#a3be8c;">/</span><span>&#39; {
+</span><span>        ...
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>あ、これはもうダメです。(よく考えたらwindows()ならいけたっぽいけどどのみち大変そう
+(もっと調べたらitertoolsにもっといい感じのもあった))</p>
+<p>あっさり諦めて調べたらregexクレート、実に手軽に正規表現使える感じでした。食わず嫌い。
+できあがったものがこちらになります。</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">tokenize</span><span>(</span><span style="color:#bf616a;">contents</span><span>: String) -&gt; JackTokenizer {
+</span><span>    </span><span style="color:#65737e;">// コメント消す
+</span><span>    </span><span style="color:#b48ead;">let</span><span> re_comment_line = Regex::new(</span><span style="color:#b48ead;">r</span><span>&quot;</span><span style="color:#a3be8c;">//.*?\n</span><span>&quot;).</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> re_comment_block = Regex::new(</span><span style="color:#b48ead;">r</span><span>&quot;</span><span style="color:#a3be8c;">/\*[\s\S]*?\*/</span><span>&quot;).</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> contents = re_comment_line.</span><span style="color:#96b5b4;">replace_all</span><span>(&amp;contents, &quot;&quot;);
+</span><span>    </span><span style="color:#b48ead;">let</span><span> contents = re_comment_block.</span><span style="color:#96b5b4;">replace_all</span><span>(&amp;contents, &quot;&quot;);
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// ダブルクオートの内側(string_const)はスペース、特殊文字含め保存せにゃならんので、
+</span><span>    </span><span style="color:#65737e;">// 出現順に別vecにとっておく。
+</span><span>    </span><span style="color:#b48ead;">let</span><span> re_string_const = Regex::new(</span><span style="color:#b48ead;">r</span><span>#&quot;</span><span style="color:#a3be8c;">&quot;.*&quot;</span><span>&quot;#).</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> string_const_matches = re_string_const.</span><span style="color:#96b5b4;">find_iter</span><span>(&amp;contents);
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> string_consts: Vec&lt;String&gt; = string_const_matches.</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">m</span><span>| {
+</span><span>        m.</span><span style="color:#96b5b4;">as_str</span><span>().</span><span style="color:#96b5b4;">replace</span><span>(&quot;</span><span style="color:#96b5b4;">\&quot;</span><span>&quot;, &quot;&quot;).</span><span style="color:#96b5b4;">to_string</span><span>()
+</span><span>        }).</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// symbolの両脇はこれもうスペースを入れちゃう。自在にスペース入れてももうおk。多分。
+</span><span>    </span><span style="color:#b48ead;">let</span><span> re_alphanumeric = Regex::new(</span><span style="color:#b48ead;">r</span><span>&quot;</span><span style="color:#a3be8c;">(?P&lt;symbol&gt;[^ 0-9a-zA-Z_])</span><span>&quot;).</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> contents = re_alphanumeric.</span><span style="color:#96b5b4;">replace_all</span><span>(&amp;contents, &quot;</span><span style="color:#a3be8c;"> $symbol </span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// もとのstring_const(ダブルクオートの内側)は /*STRING_CONST*/ って文字列にしちゃう。
+</span><span>    </span><span style="color:#65737e;">// コメント行は抹殺済みなので/* */を使っても問題ないはず。
+</span><span>    </span><span style="color:#b48ead;">let</span><span> contents = re_string_const.</span><span style="color:#96b5b4;">replace_all</span><span>(&amp;contents, &quot;</span><span style="color:#a3be8c;"> /*STRING_CONST*/ </span><span>&quot;);
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// あとはsplit_whitespaceしちゃえばトークン単位のVec&lt;String&gt;ができるはず。
+</span><span>    </span><span style="color:#b48ead;">let</span><span> contents: Vec&lt;String&gt; = contents.</span><span style="color:#96b5b4;">split_whitespace</span><span>().</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">s</span><span>| s.</span><span style="color:#96b5b4;">to_string</span><span>()).</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#65737e;">//structにしておく。適当。
+</span><span>    JackTokenizer{
+</span><span>        contents,
+</span><span>        string_consts,
+</span><span>        idx: </span><span style="color:#d08770;">0</span><span>,
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>正規表現つえー。でも自分で書いてなにがなんだかさっぱりわからない。
+とにかくこれで目標のxml、例えば</p>
+<pre data-lang="xml" style="background-color:#2b303b;color:#c0c5ce;" class="language-xml "><code class="language-xml" data-lang="xml"><span>&lt;</span><span style="color:#bf616a;">keyword</span><span>&gt; let &lt;/</span><span style="color:#bf616a;">keyword</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">identifier</span><span>&gt; hoge &lt;/</span><span style="color:#bf616a;">identifier</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">symbol</span><span>&gt; = &lt;/</span><span style="color:#bf616a;">symbol</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">stringConstant</span><span>&gt; c o m m e n t &lt;/</span><span style="color:#bf616a;">stringConstant</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">symbol</span><span>&gt; ; &lt;/</span><span style="color:#bf616a;">symbol</span><span>&gt;
+</span></code></pre>
+<p>に対して、</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span>[&quot;</span><span style="color:#a3be8c;">let</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">hoge</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">=</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">/*STRING_CONST*/</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">;</span><span>&quot;] 
+</span><span>[&quot;</span><span style="color:#a3be8c;">c o m m e n t</span><span>&quot;]
+</span></code></pre>
+<p>ていう配列を作ることができた。これはもうデレと言って過言ではない。
+あとは本の通りにメソッド実装したらいけたっぽい。テストも通りました。
+ダサい部分はあとで直すし、怪しい部分は極力直すこととします。(多分直さない)
+日記書いてるあいだに次から次へと修正箇所が出てきます。</p>
+<p>明日からはパーサにとりかかる。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-27</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>いい天気。ちょっと遠くまで自転車走らそうかと思ったけどそういえば緊急事態宣言中だった。
+緊急事態になると私の懐も緊急事態宣言が発令されるので今日からご飯を質素にしました。
+白米、カレーの缶詰、みそ汁。</p>
+<h2 id="jin-ri-nomemo">今日のメモ</h2>
+<p>今日はnand2tetrisの続きを書く。現在10章でコンパイラ作りに入ったところ。コンパイラを作るなんて大それた経験はもちろんなし。構文解析だの、パーサだの、なーんとなくは知ってるくらいの知識です。</p>
+<p>まずはトークナイザというものを作るらしい。具体的には</p>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span>let hoge = &quot;</span><span style="color:#a3be8c;">fuga</span><span>&quot;;
+</span></code></pre>
+<p>を</p>
+<pre data-lang="xml" style="background-color:#2b303b;color:#c0c5ce;" class="language-xml "><code class="language-xml" data-lang="xml"><span>&lt;</span><span style="color:#bf616a;">keyword</span><span>&gt; let &lt;/</span><span style="color:#bf616a;">keyword</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">identifier</span><span>&gt; hoge &lt;/</span><span style="color:#bf616a;">identifier</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">symbol</span><span>&gt; = &lt;/</span><span style="color:#bf616a;">symbol</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">stringConstant</span><span>&gt; fuga &lt;/</span><span style="color:#bf616a;">stringConstant</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">symbol</span><span>&gt; ; &lt;/</span><span style="color:#bf616a;">symbol</span><span>&gt;
+</span></code></pre>
+<p>とにかくこんな感じに変換すればいいみたい。意外とチョロい? あ、コメントとかも消さないといけないそうです。</p>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#65737e;">// ここから行末まで消えたら勝ち
+</span><span style="color:#65737e;">/* こういうのも 
+</span><span style="color:#65737e;">対応しないとダメなん? */
+</span></code></pre>
+<p>ちょっと考えてみると<code>let hoge = 2 ;</code>も<code>let hoge=2;</code>も<code>let hoge=&quot;  2  &quot;;</code>も、ちゃんと処理できにゃならんとか結構ハードル高い</p>
+<p>(<code>[&quot;let&quot;, &quot;hoge&quot;, &quot;=&quot;, &quot;2&quot;, &quot;;&quot;]</code> と <code>[&quot;let&quot;, &quot;hoge=2;&quot;]</code>が混在するとか超ヤダ)。</p>
+<p>構文から推測させるのかなと思ったけど、だとしたら私には超難問すぎるし、それはパーサをつくるくだりでやるんじゃね? と予想してみたり試行錯誤。 </p>
+<p>あ、文字リテラルの空白勝手に消したらいかんくらいはかろうじて分かりました。</p>
+<h3 id="torima">とりま</h3>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#bf616a;">test</span><span>]
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">test</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> input = 
+</span><span style="color:#b48ead;">r</span><span>#&quot;
+</span><span style="color:#a3be8c;">// comment1
+</span><span style="color:#a3be8c;">let c = &quot;string_dayo&quot;;
+</span><span style="color:#a3be8c;">let x = (A+B)+C;
+</span><span style="color:#a3be8c;">class Class {
+</span><span style="color:#a3be8c;">    field aaa;
+</span><span style="color:#a3be8c;">}
+</span><span style="color:#a3be8c;">// comment2
+</span><span style="color:#a3be8c;">not_comment // comment 
+</span><span style="color:#a3be8c;">not_comment / not_comment
+</span><span style="color:#a3be8c;">let x = &quot;string literal dayo -  &quot;
+</span><span style="color:#a3be8c;">/* comment3 */
+</span><span style="color:#a3be8c;">/* comment4
+</span><span style="color:#a3be8c;">comment5 */
+</span><span>&quot;#
+</span><span>    .</span><span style="color:#96b5b4;">to_string</span><span>();
+</span><span>    </span><span style="color:#b48ead;">let</span><span> output = </span><span style="color:#96b5b4;">function</span><span>(input);
+</span><span>    output.</span><span style="color:#96b5b4;">print</span><span>();
+</span><span>}
+</span></code></pre>
+<p>まずはテストを書いてみました。
+頭のいい人がバカでも書けるように作ってくれている...</p>
+<p>続きはあした。これ(日記)書くの超疲れるわ。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-26</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>気候のせいか眠くて眠くて仕方が無い。こういう日は椅子に座ってるだけで寝てしまうので部屋の掃除などをする。
+きれいになった台所を使って冷シャブを作って食ったらなんかお腹の調子が非常に悪い。アタマも痛い。熱もあるような気がする。
+このご時世に具合が悪くなるのはなんとも居心地が悪い。お肉は大変おいしゅうござったので大丈夫だとは思いますけども。</p>
+<p>「冷シャブ」てなんか凄いすね。googleの変換では一発で出ない。れいしゃぶ。</p>
+<p>さておき今週やることを考えてみる。一応、ここのページの存在意義?いやそんなの別に無いんだけども、多少なりともいろいろ試していく中で溜まった知見とか、そういうのをちょろっと書くのはいいなぁと思っているので、そこら辺書きやすく、かつまとめやすく、できれば読みやすいように記事のスタイルとか、環境とか、まとめるのが次の課題かなぁと。</p>
+<p>となるとまずは何からかなと考えた時に、まずはマークダウンでちゃんとした記事を書けるようにするのがいいのかなと思ったので、そこらへん5月いっぱい練習してみようかなという感じでしょうか。その中でスタイルとかの改善点がみつかると思いますし。</p>
+<p>きょうはさっさと寝ますけどね。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-25</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>火星の人、また読みたくなったのでまた買っちゃった。</p>
+<p>n2t9章。最初はこのタイミングでテトリス作ってみようと意気込んでいたんだけど時間がかかりそうなので諦める。
+とりあえずごく簡単なグラフィックを描いてみてjack言語仕様に慣れるというのは終わらせてみる。
+今週から10章に取り組みますけどここから大変そうです。</p>
+<p>来週はページの修正とn2tの続きを進めたいと思いまーす。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-24</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>atcoder abc199 3完で実に現状維持。nand2tetrisを終わらせたいのでアルゴリズムの勉強はその後でもいいや。
+現状維持すごい!</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-23</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>今週はjavascriptをいろいろ試して最終的にgithubのcontributionを表示させることと、
+atcoderのレート変動をグラフにすることが出来てご満悦です。
+付随してaltJSだのwebpackだのについても調べるに至る。webpackはなんかちょうど変数の名前がかぶった時に
+エラー出て不貞腐れた時に助けて頂く。導入もさせて頂く。
+グラフがいっぱい出るとエヴァぽくてカッコイイと思ったのでなにかグラフにできる事あるかなと思ったので、
+思いつきでパチンコに行ったら15000円勝った後に25000円スッたのでもう嫌になりました。
+ロト6とかグラフにしてもつまんねぇぽいし、FXとかそもそも種銭がねぇですし、そもそもなぜギャンブルなのかと
+我に帰った辺り、冴えてるなと思いました。</p>
+<p>gitpushのタイミングが更新タイミングなのだから、gitのコミット履歴で更新履歴がかけるんじゃないかと思って
+調べたらgitgraph.jsというのがあったので試してみる。githubのデータからそのままbolgパーツにできるとか、
+そういうもんでは無いらしいのでとりあえず保留。うまいことできんのかもしんないけどそこらへんはまだよくわかんない。
+gitのなんか路線図みたいのもアレカッコイイので好きです。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-22</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>春の陽気に誘われて自転車で都内をフラフラ。
+若干風が強かったのでちょっと公開しながらも新宿から池袋らへんを走っていると、
+なにやら見慣れた紙切れがひらひらと舞っています。札!千円札が空から降って来た!
+空からお金が降ってくればいいなぁと毎日思っていましたが、まさか現実になるとは。
+信じていれば夢は叶うって本当だったんですね。</p>
+<p>周囲には誰もいないし交番に裸の千円届けてもなぁということで、スシローで腹いっぱい食った。最高。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-19</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>ページできた!と思ってiphoneで見てみたらグッチャグチャ。いろいろ調べてみると昨今はモバイル前提でやったほうがいいですよ。だそうなので今週もっかい作り直して見たいと思います。</p>
+<p>ほんでその、レスポンシブつうの?いろいろ調べてみる訳です。となるとcssフレームワークについても検索をかける訳です。するとまぁやれあれが良いあれはダメだの気に食わないだの2021年使いたい10選だの使わなくなった10の理由だのみたいなサイトにたどり着き、ああこれは近づかない方がいいやつだ。散歩に出かけました。すっかり夏模様です。</p>
+<p>Bulmaは遊んでみた結果よくわかんなかったし、javascriptも食わず嫌いを克服したのでUIKitというのをいれつつも極力使わないでcssをこつこつ書くのがいいのかなと、ぼんやり方針を定めます。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-18</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>ページ修正。とりあえず形になったのでアップ。誰と作るわけでもないでgitの機能とか全然使ったことなかったんだけど、
+公開している方とは別に開発用のブランチを作って、そっちをいじくり倒した後、最終的にマスターブランチにマージするという、
+実にgitっぽいやり方をやってみて、実に上手く行ったので今更ですがgit最高となった。何度か勉強はしていたんだけど、
+ついにマージとはなんぞという事が理解できた感じです。いっつもブランチを破壊?よくわからないことになっていたので。</p>
+<p>いろいろ覚えると楽しいし、それをちゃんとサイトを作って書き記すとかかなり成長しておるのでサイトは作ってよかったですな。
+今年はやる気が溢れておるですわ。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-17</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>mdnを読むだけでjavascriptまで分かっちゃった!</p>
+<p>つかjavascriptがこんなに便利かつ書きやすいものだとは知らなんだ。
+なんか超めんどくさいイメージだったのですが。非同期処理とかやるのはそれなりに大変そうですけど。
+ページの装飾とか作るだけなら自分でもなんとかなりそうな感じ。あとjqueryって何?</p>
+<p>ほんでそこらへん、覚えたことを使ってここのページを改造中。ちょっと分かるだけで全然違うですなぁ。センス的なことはさておきですが。
+文章力に関してもさておき。</p>
+<p>夕方のatcoderも参加して3問できた。レートが完全に停滞模様(現在728)ですが練習してないので仕方ない。
+どうやって練習時間作るかも課題です。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-15</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>ここのページを修正中。MDNのこうかはばつぐんで、HTMLもCSSも読める!読めるぞ!という感じ。
+読み方、書き方が分かるとHTML書くの楽しくなってきました。
+vscodeとか調べたらもっと書きやすくなるなんかがあると思うので調べてみたい。
+今週中には作り終わるといいなぁと思います。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-14</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>web関係の本、アマゾンとか見てみてもやっぱり全然購買意欲が湧かないものの、
+なにかピンと来るレビューがあれば買ってみようかと、
+いやでも3000円とか欲しくもない本に使うのもなぁとあれこれ探った結果、
+どうやらMDNというサイトに大概のことが書いてあるというではありませんか。
+丸一日読みましたがはい、これでした。もう最高。mozillaしか勝たん。
+丸一日は嘘です。本買うお金が浮いたのでパチンコ行って2500円スッたけど
+本の代金をさっぴくと500円浮いてますわ。
+ああブラウザもfirefoxにしますわ。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-13</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>時間ができたのでここのページをいろいろイジってみた結果破壊寸前。
+やっぱhtmlとかjavascriptとか詳しくないなー。
+勉強しないとダメだなと前から思ってはいるんだけど、何だろうね。
+なんか個人的にグッとくる本が無いのがかなり障害としてデカイ。
+本屋に買いに行っていまいちピンと来ないで帰るという動作を10回くらい行っている気がします。
+htmlの本とか、なんかこう、例題がシャレオツを要求してくる感じのあれがどうもなぁ。
+カフェのサイトとか一生作んないのによぅ。
+ああ、作るかもしれないという意識で探してみればいいのかもしらんね。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-12</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>今週末くらいに完成すればいいかなと思ってたコードを黙々と書いて、
+自分で書いておきながら全然意味がわからんものが出来上がって、気がついたら半日くらいたってて、
+ひとまず書き終わった気配だから仕方がないので
+とりあえずビルドしてみたら普通にビルド成功しちゃったので、シンタックスエラーも吐かないとか、
+そもそも何かが根本的に間違っているとしか思えないけど冗談半分でテストかけたら
+なんかしらんけどテストもすんなり通ってしまったので、ああこれは夢か何かかしらと思ったら現実だったので
+今日は何かがどうかしている。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-11</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>atcoder 3完。D問題はなんか途中で色々調べ物してたら終わってしまった。
+個人的にはアルゴリズム以外の部分でも成長が見られていますから全然おkです。
+成績も伸び悩んではいるものの許容の範囲です。つか全然勉強していないからなー。
+勉強しながらで11月までに水色が踏めればいいかなと思っていますです。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-10</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>一週間XCOM2を狂ったようにプレイしてやっとこさイージークリア。
+難しすぎるだろー。面白いけど。あやうくそのままノーマル難易度進めそうになったけど
+きりが無いので一旦停止。
+今週はxcomしかやってないです。本当にダメ。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-04</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>確定申告提出完了。おつかれさまでした。
+出来(とかあるのか?)はともかくこれで義務は果たした。
+さて、個人事業主としてこの収入の低さはいかがなものか?
+1年目はこんな感じ?</p>
+<p>気を良くしてストレージの整理とかしていたらXCOM2が出てきたので
+日がなプレイしてたら1日半くらい経ってしまいました。おもしろいねー</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-02</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>確定申告が思いのほかというか、これが噂に聞く確定申告かといった感じのめんどくせぇやつ。
+なんだかんだ1000件くらいのクエリを処理せにゃならんのですが、完全に素人なので
+どこに何を書いて良いのやらがさっぱりなのですが、それでも調べながらやってたら
+やっとこさなんとなく3分の2くらいは終わった感じ。
+どう考えても今年は赤字ですので残念ながら税金払うことができないです。
+ということを一生懸命伝えるべくがんばります。</p>
+
+            </div>
+        </div>
+        
+        <div class="sa-card">
+            <div class="sa-article-header">
+                <div class="sa-author-icon">
+                    <img class="uk-border-circle" src=../img/dayo.jpg alt="Placeholder image">
+                </div>
+                <div class="sa-article-data">
+                    <p class="sa-article-date">2021-04-01</p>
+                    <p class="sa-article-title">DairyMemo</p>
+                </div>
+            </div>
+            <div class="sa-article-content">
+                <p>4月1日。心機一転ということで、ちょろっと部屋の掃除をしてみたり。
+財布に2000円しか入ってないと思ってたら実は3000円入っていたり,
+豚の生姜焼き作ったらかなり美味く出来上がったりと今季は初日から
+勝ち確、確変確定レインボーの気配です。</p>
+
+            </div>
+        </div>
+        
+    </article>
+    
+
+</body>
+
+</html>
